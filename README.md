@@ -1,51 +1,15 @@
-# Mage2 Module GetJohn PaymentsensePaymentsOverride
-
-    ``getjohn/module-paymentsensepaymentsoverride``
-
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
-
-
-## Main Functionalities
-Overrides the payments sense module by adding GDPR messages to the payment form
+# Magento2 Module to fix Paymentsense Issues
 
 ## Installation
-\* = in production please use the `--keep-generated` option
 
-### Type 1: Zip file
+Add this repository to your composer.json as a "vcs" repository (see [Loading a package from a VCS repository](https://getcomposer.org/doc/05-repositories.md#loading-a-package-from-a-vcs-repository))
 
- - Unzip the zip file in `app/code/GetJohn`
- - Enable the module by running `php bin/magento module:enable GetJohn_PaymentsensePaymentsOverride`
- - Apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+Then,
 
-### Type 2: Composer
+`composer require getjohn/module-paymentsensepaymentsoverride`
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require getjohn/module-paymentsensepaymentsoverride`
- - enable the module by running `php bin/magento module:enable GetJohn_PaymentsensePaymentsOverride`
- - apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+## What this does
 
-
-## Configuration
-
-
-
-
-## Specifications
-
-
-
-
-## Attributes
-
+ * adds "checkout agreements" to Hosted and Direct payment methods, so that if you have a "agree to the terms" box, payment still works
 
 
