@@ -1,6 +1,5 @@
 {
     "name": "getjohn/module-paymentsensepaymentsoverride",
-    "version": "1.0.1",
     "description": "Overrides the payments sense module by adding GDPR messages to the payment form",
     "type": "magento2-module",
     "license": "proprietary",
